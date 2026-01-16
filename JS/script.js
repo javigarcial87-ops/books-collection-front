@@ -37,26 +37,20 @@ btnUsers.addEventListener('click', async ()=>{
 
 //LIBROS
 
-btnBooks.addEventListener('click', async()=>{
-    content.innerHTML = '<p>Catgando libros</p>'
+btnBooks.addEventListener('click', async () => {
+  content.innerHTML = '<p>Cargando libros...</p>'
 
-    const response = await fetch(`${API_URL}/books`)
-    const books = await response.json()
+  const response = await fetch(`${API_URL}/books`)
+  const books = await response.json()
 
-    content.innerHTML= books.map(book => `
-        
-        <div class="card">
-        
-        <img src="${book.imagen}" alt="${book.titulo}">
-        
-        <h3>${book.titulo}</h3>
-        <p>${book.autor}</p>
-        <p>${book.fechaPublicacion}</p>
-        
-        </div>
-        
-        `).join('')
-
+  content.innerHTML = books.map(book => `
+    <div class="card">
+      <img src="${book.imagen}" alt="${book.titulo}">
+      <h3>${book.titulo}</h3>
+      <p>${book.autor}</p>
+      <p>${book.fechaPublicacion}</p>
+    </div>
+  `).join('')
 })
 
 
