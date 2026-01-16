@@ -13,17 +13,28 @@ btnUsers.addEventListener('click', async ()=>{
     const users = await response.json()
 
     content.innerHTML = users.map(user => `
+        <div class="card">
+
+        <h3>${user.nombre}</h3>
+        <p>${user.correo}</p>
+        <p>Colección</p>
+        
+        <ul>
+            
+            ${user.coleccion.map(book => `<li>${book}</li>`).join('')}
+
+
+        </ul>
+        <p>Whislist</p>
+        <ul>
+            <li></li>
+        </ul>
         
         
+        ${}
         
-        
-        
-        
-        
-        
+        </div>
         `).join('')
-
-
 })
 
 
