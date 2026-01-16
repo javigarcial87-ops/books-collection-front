@@ -2,7 +2,7 @@ const btnUsers = document.getElementById('btnUsers')
 const btnBooks = document.getElementById('btnBooks')
 const content = document.getElementById('content')
 
-const API_URL = 'http://localhost:3000'
+const API_URL = 'http://localhost:3002'
 
 //USERS
 
@@ -16,18 +16,18 @@ btnUsers.addEventListener('click', async ()=>{
         <div class="card">
 
         <h3>${user.nombre}</h3>
-        <p>${user.correo}</p>
+        <p>${user.email}</p>
         <p>Colección</p>
         
         <ul>
             
-            ${user.coleccion.map(book => `<li>${book}</li>`).join('')}
+            ${user.libros.map(book => `<li>${book}</li>`).join('')}
 
 
         </ul>
         <p>Whislist</p>
         <ul>
-            ${user.wishlist.map(book => `<li>${book}</li>`).join('')}
+            ${user.lista.map(book => `<li>${book}</li>`).join('')}
         </ul>
         
         </div>
@@ -45,9 +45,15 @@ btnBooks.addEventListener('click', async()=>{
 
     content.innerHTML= books.map(book => `
         
+        <div class="card">
         
+        <img src="${book.imagen}" alt="${book.titulo}">
         
+        <h3>${book.titulo}</h3>
+        <p>${book.autor}</p>
+        <p>${book.fechaPublicacion}</p>
         
+        </div>
         
         `).join('')
 
