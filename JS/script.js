@@ -27,16 +27,31 @@ btnUsers.addEventListener('click', async ()=>{
         </ul>
         <p>Whislist</p>
         <ul>
-            <li></li>
+            ${user.wishlist.map(book => `<li>${book}</li>`).join('')}
         </ul>
-        
-        
-        ${}
         
         </div>
         `).join('')
 })
 
+
+//LIBROS
+
+btnBooks.addEventListener('click', async()=>{
+    content.innerHTML = '<p>Catgando libros</p>'
+
+    const response = await fetch(`${API_URL}/books`)
+    const books = await response.json()
+
+    content.innerHTML= books.map(book => `
+        
+        
+        
+        
+        
+        `).join('')
+
+})
 
 
 
