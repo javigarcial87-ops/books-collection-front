@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    display: flex;
+
+}
+.botones{
+    display: flex;
+    margin-top: 70px;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#btnUsers{
+border: none;
+width: 300px;
+height: 100px;
+font-size: 16pt;
+background-color: rgb(0, 153, 255);
+color: beige;
+font-weight: bold;
+height: 40px;
+border-radius: 3px;
+}
+
+#btnBooks {
+border: none;
+width: 300px;
+height: 100px;
+font-size: 16pt;
+background-color: rgb(0, 153, 255);
+color: beige;
+font-weight: bold;
+height: 40px;
+border-radius: 3px;
+}
+
+
+
+
+
+#content{
+    display: flex;
+   justify-content: center;
+    transform: scale(0.8);
+    gap: 10px;
+
+}
+.card{
+    gap: 20px;
+    border: 1px black solid;
+    border-radius: 30px;
+    padding: 20px;
+    width: 300px;
+    background-color: rgb(253, 168, 65);
+}
+img{
+    width: 300px;
+}
